@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 const lyric = "THERE ARE TWO SIDES OF ME — A LOT OF LIGHT — A LITTLE DARK — ";
 
@@ -20,11 +19,11 @@ export default function Entry() {
       <section className="portal-stage" aria-labelledby="entry-title">
         <p className="eyebrow">THE OFFICIAL ARTIST SITE</p>
         <h1 id="entry-title">JODY <span>LYNN</span></h1>
-        <Link className="portal" href="/home" aria-label="Enter Jody Lynn's official site">
+        <a className="portal" href="/home" aria-label="Enter Jody Lynn's official site">
           <span className="portal-ring" aria-hidden="true" />
           <Image src="/jody-kaleidoscope.png" alt="A luminous violet glass kaleidoscope" width={1536} height={1024} priority />
           <span className="portal-cta">ENTER THE KALEIDOSCOPE <b>↗</b></span>
-        </Link>
+        </a>
       </section>
       <p className="entry-caption">ONE VOICE. EVERY COLOR.</p>
     </main>

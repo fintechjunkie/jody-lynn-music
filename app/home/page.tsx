@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 const links = [
   { label: "LISTEN", title: "SPOTIFY", note: "Songs, releases & the latest sound", href: "https://open.spotify.com/artist/6YLtlPHlSvadNAENGawZDk?si=2gc7oqdgT2q1a_bbopkIXw", color: "lime" },
@@ -12,7 +11,7 @@ export default function ArtistHome() {
     <main className="site-shell">
       <div className="noise" aria-hidden="true" />
       <nav className="main-nav" aria-label="Main navigation">
-        <Link className="nav-logo" href="/"><span className="brand-mark">JL</span><span>JODY LYNN</span></Link>
+        <a className="nav-logo" href="/"><span className="brand-mark">JL</span><span>JODY LYNN</span></a>
         <div className="nav-links"><a href="#about">About</a><a href="#connect">Connect</a></div>
         <a className="nav-listen" href="https://open.spotify.com/artist/6YLtlPHlSvadNAENGawZDk?si=2gc7oqdgT2q1a_bbopkIXw" target="_blank" rel="noreferrer">LISTEN NOW ↗</a>
       </nav>
@@ -66,7 +65,7 @@ export default function ArtistHome() {
         </div>
       </section>
 
-      <footer><Link href="/">JODY LYNN</Link><p>ALL THE LIGHT. ALL THE SHADE.</p><p>© {new Date().getFullYear()}</p></footer>
+      <footer><a href="/">JODY LYNN</a><p>ALL THE LIGHT. ALL THE SHADE.</p><p>© {new Date().getFullYear()}</p></footer>
     </main>
   );
 }
