@@ -25,14 +25,13 @@ export default function Entry() {
         <h1 id="entry-title" className="sr-only">Welcome to the world of Jody Lynn</h1>
 
         <div className="room-plane plane-top" aria-hidden="true">
-          <span className="plane-line line-welcome">{displayGlyphs("WELCOME")}</span>
-          <span className="plane-line line-to-the">{displayGlyphs("TO THE")}</span>
+          <span className="plane-line">{displayGlyphs("WELCOME TO")}</span>
         </div>
         <div className="room-plane plane-left" aria-hidden="true">
-          <span className="plane-line">{displayGlyphs("WORLD")}</span>
+          <span className="plane-line">{displayGlyphs("THE WILD")}</span>
         </div>
         <div className="room-plane plane-right" aria-hidden="true">
-          <span className="plane-line">{displayGlyphs("OF")}</span>
+          <span className="plane-line">{displayGlyphs("WORLD OF")}</span>
         </div>
         <div className="room-plane plane-bottom" aria-hidden="true">
           <span className="plane-line">{displayGlyphs("JODY LYNN")}</span>
@@ -43,7 +42,6 @@ export default function Entry() {
           <span className="portal-copy">
             <small>ENTER THE</small>
             <strong>KALEIDOSCOPE</strong>
-            <i aria-hidden="true">↗</i>
           </span>
         </a>
       </section>
