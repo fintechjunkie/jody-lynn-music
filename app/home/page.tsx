@@ -38,7 +38,13 @@ export default function ArtistHome() {
         </div>
 
         <div className="about-story">
-          <div><span className="tag violet">IN HER WORDS</span><h2>MY MUSIC IS A<br/>KALEIDOSCOPE.</h2></div>
+          <div className="story-lead">
+            <span className="tag violet">IN HER WORDS</span>
+            <h2>MY MUSIC IS A<br/>KALEIDOSCOPE.</h2>
+            <figure className="story-photo">
+              <img src="/jody-in-her-words.jpg" alt="Jody Lynn seated beside an amplifier in a black-and-white portrait" />
+            </figure>
+          </div>
           <div className="story-copy">
             <p>All the artists who shaped me, all the life I’ve lived, and all my fresh ideas collide into a colorful fusion of genres, moods, and styles.</p>
             <p>Music gives voice to the thoughts and feelings that lurk in the shadows—and brings them into the light.</p>
