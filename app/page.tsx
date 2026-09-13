@@ -1,3 +1,14 @@
+const displayGlyphs = (text: string) =>
+  Array.from(text).map((letter, index) => {
+    const shape = /[AODR]/.test(letter) ? ` glyph-${letter.toLowerCase()}` : "";
+
+    return (
+      <span className={`display-glyph${shape}`} key={`${letter}-${index}`}>
+        {letter === " " ? "\u00a0" : letter}
+      </span>
+    );
+  });
+
 export default function Entry() {
   return (
     <main className="entry-shell">
@@ -9,34 +20,31 @@ export default function Entry() {
         <span className="entry-note">THE OFFICIAL ARTIST SITE</span>
       </header>
 
-      <section className="world-stage" aria-labelledby="entry-title">
+      <section className="type-room" aria-labelledby="entry-title">
         <h1 id="entry-title" className="sr-only">Welcome to the world of Jody Lynn</h1>
-        <div className="world-frame" aria-hidden="true">
-          <span className="frame-corner corner-one" />
-          <span className="frame-corner corner-two" />
-          <span className="frame-corner corner-three" />
-          <span className="frame-corner corner-four" />
+
+        <div className="room-plane plane-top" aria-hidden="true">
+          <span className="plane-line">{displayGlyphs("WELCOME TO")}</span>
+        </div>
+        <div className="room-plane plane-left" aria-hidden="true">
+          <span className="plane-line">{displayGlyphs("THE")}</span>
+        </div>
+        <div className="room-plane plane-right" aria-hidden="true">
+          <span className="plane-line">{displayGlyphs("WORLD OF")}</span>
+        </div>
+        <div className="room-plane plane-bottom" aria-hidden="true">
+          <span className="plane-line">{displayGlyphs("JODY LYNN")}</span>
         </div>
 
-        <div className="world-copy" aria-hidden="true">
-          <span className="world-word word-welcome">WELCOME TO</span>
-          <span className="world-word word-the">THE</span>
-          <span className="world-word word-world">WORLD OF</span>
-          <span className="world-word word-jody">JODY LYNN</span>
-        </div>
-
-        <div className="portal-wrap">
-          <span className="portal-halo halo-one" aria-hidden="true" />
-          <span className="portal-halo halo-two" aria-hidden="true" />
-          <span className="portal-halo halo-three" aria-hidden="true" />
-          <a className="type-portal" href="/home" aria-label="Enter Jody Lynn's official site">
-            <span>ENTER THE</span>
+        <a className="kaleidoscope-box" href="/home" aria-label="Enter Jody Lynn's official site">
+          <img src="/jody-kaleidoscope-portal.png" alt="" />
+          <span className="portal-shade" aria-hidden="true" />
+          <span className="portal-copy">
+            <small>ENTER THE</small>
             <strong>KALEIDOSCOPE</strong>
-            <i>↗</i>
-          </a>
-        </div>
-
-        <p className="entry-cycle-note" aria-hidden="true">WELCOME / DISAPPEAR / RETURN / REPEAT</p>
+            <i aria-hidden="true">↗</i>
+          </span>
+        </a>
       </section>
     </main>
   );
